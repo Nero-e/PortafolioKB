@@ -1,6 +1,6 @@
-import LandingHeader from "@/components/LandingHeader";
-import MainSection from "@/components/MainSection";
-import SecondSection from "@/components/SecondSection";
+import { LandingHeader } from "@/components/Shared/Header";
+import { MainSection } from "@/components/MainSection";
+import { Gallery } from "@/components/Gallery";
 // import Image from "next/image";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
           <MainSection />
         </div>
         <div className="snap-start">
-          <SecondSection/>
+          <Gallery />
         </div>
       </main>
     </>

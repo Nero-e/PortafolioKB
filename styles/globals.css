@@ -6,57 +6,38 @@
   --gradient-color1: #e8e0d9;
   --gradient-color2: #e7cdd3;
   --gradient-color3: #cdd5df;
-  --color4: #6528F7;
-  --color5: #A076F9;
-  --color6: #D7BBF5;
-  --color7: #EDE4FF;
-  --colorA: #241533;
-  --colorB: #1F1838;
-  --colorC: #101121;
-  --colorD: #182238;
-  --colorE: #152833;
   --colorF: #EDE4C8;
   --colorG: #dbb42c;
   --colorH: #c9a227;
   --colorI: #b69121;
-}
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #a3a3a3;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-track {
-  background: #ffffff;
-  border-radius: 3px;
+  --harvest-gold:#e8ae00;
+  --amber:  #ffbf00;
+  --mikado-yellow: #ffc720;
+  --sunglow: #ffcf40;
+  --mustard: #ffd760;
 }
 
-.bg-gradient {
+/* .bg-gradient {
   animation-name: gradient-fade;
   animation: gradient-fade 40s linear infinite alternate;
   background-position: 0 0;
   background-size: 100% 300%;
   background-image: radial-gradient(circle,var(--gradient-color3),var(--gradient-color2),var(--gradient-color1));
-}
+} */
 
-.bg-gradient-2 {
+.bg-gradient {
   animation-name: gradient-fade;
   animation: gradient-fade 20s linear infinite alternate;
   background-position: 0 0;
   background-size: 100% 300%;
   background-image: linear-gradient(
-    var(--colorI),
-    var(--colorH),
-    var(--colorF),
-    var(--colorH)
+    var(--harvest-gold),
+    var(--amber),
+    var(--mikado-yellow),
+    var(--sunglow),
+    var(--mustard),
+    var(--amber)
   );
-}
-
-.text-animated {
-  animation-name: text-animate;
-  animation: text-animate 12s linear infinite alternate;
 }
 
 @keyframes gradient-fade {
@@ -66,47 +47,6 @@
   100% {
     background-position: 0% 100%;
   }
-}
-
-@keyframes text-animate {
-  0% {
-    color: #ef476f;
-  }
-  20% {
-    color: #F8683E;
-  }
-  40% {
-    color: #ffd166;
-  }
-  60% {
-    color: #06d6a0;
-  }
-
-  80% {
-    color: #118ab2;
-  }
-  100% {
-    color: #6528F7;
-  }
-}
-
-@font-face {
-  font-family: 'franchise';
-  src: url('../public/fonts/Franchise.ttf');
-}
-
-@font-face {
-  font-family: 'lunch';
-  src: url('../public/fonts/LUNCH___.TTF');
-}
-
-@font-face {
-  font-family: 'lemon';
-  src: url('../public/fonts/LEMONMILK-Regular.otf');
-}
-@font-face {
-  font-family: 'lemonM';
-  src: url('../public/fonts/LEMONMILK-Medium.otf');
 }
 
 .elemento {

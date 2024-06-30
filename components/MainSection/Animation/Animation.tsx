@@ -1,7 +1,7 @@
 "use client";
 import Spline from "@splinetool/react-spline";
 
-const Animation = () => {
+export const Animation = () => {
   return (
     <>
       <div className="h-full z-20 absolute bottom-0 top-0 left-[50rem] right-0">
@@ -14,4 +14,3 @@ const Animation = () => {
     </>
   );
 };
-export default Animation;
