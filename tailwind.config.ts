@@ -1,17 +1,24 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': {'max': '639px'},
+      },
+      gridTemplateColumns: {
+        '1.5fr': '1.5fr 1fr',
+        'custom': '1fr 1.5fr 1fr',
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
         'seasalt': {
@@ -28,12 +35,29 @@ const config: Config = {
           DEFAULT: '#181719',
           '100': '#1D1C1E'
         },
+        'harvest-gold': '#DAA520',
+        'amber': '#FFBF00',
+        'mikado-yellow': '#FFC40C',
+        'sunglow': '#FFCC33',
+        'mustard': '#FFDB58',
       },
       boxShadow: {
         'custom-light': '0 2px 4px rgba(0, 0, 0, 0.1)',
         'custom-dark-top': '0px 4px 4px rgba(16, 15, 17, 25%), 0px -1px 0px rgba(16, 15, 17, 3%)',
         'custom-dark': '0px 4px 4px rgba(16, 15, 17, 25%)',
         
+      },
+      fontFamily: {
+        alfredinoSemirounded: ['AlfredinoSemirounded', 'sans-serif'],
+        alfredinoTuttocurvy: ['AlfredinoTuttocurvy', 'sans-serif'],
+        alfredinoSemimono: ['AlfredinoSemimono', 'monospace'],
+        author: ['Author', 'sans-serif'],
+        authorItalic: ['AuthorItalic', 'sans-serif'],
+        dailyBubble: ['DailyBubble', 'sans-serif'],
+        gemola: ['Gemola', 'sans-serif'],
+        manusia: ['Manusia', 'sans-serif'],
+        satochi: ['Satoshi', 'sans-serif'],
+        satochiItalic: ['SatoshiItalic', 'sans-serif'],
       },
     },
   },

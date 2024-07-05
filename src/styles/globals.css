@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient-color1: #e8e0d9;
+  --gradient-color2: #e7cdd3;
+  --gradient-color3: #cdd5df;
+  --colorF: #EDE4C8;
+  --colorG: #dbb42c;
+  --colorH: #c9a227;
+  --colorI: #b69121;
+  --harvest-gold:#e8ae00;
+  --amber:  #ffbf00;
+  --mikado-yellow: #ffc720;
+  --sunglow: #ffcf40;
+  --mustard: #ffd760;
+}
+
+/* .bg-gradient {
+  animation-name: gradient-fade;
+  animation: gradient-fade 20s linear infinite alternate;
+  background-position: 0 0;
+  background-size: 100% 300%;
+  background-image: linear-gradient(
+    var(--harvest-gold),
+    var(--amber),
+    var(--mikado-yellow),
+    var(--sunglow),
+    var(--mustard),
+    var(--amber)
+  );
+}
+
+@keyframes gradient-fade {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+} */
+
+@keyframes gradient-fade {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.border-gradient::before {
+  opacity: 0.5;
+  content: '';
+  position: absolute;
+  top: -0px;
+  left: -0px;
+  right: -0px;
+  bottom: -0px;
+  border-radius: inherit;
+  background-image: linear-gradient(
+    var(--harvest-gold),
+    var(--amber),
+    var(--mikado-yellow),
+    var(--sunglow),
+    var(--mustard),
+    var(--amber)
+  );
+  z-index: -1;
+  animation: gradient-fade 20s linear infinite alternate;
+}
+
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    var(--tw-gradient-stops)
+  ) 1;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  animation: gradient-fade 20s linear infinite alternate;
+}
+
+
+
+
+/* .elemento {
+  background-color: #0F1020; 
+  background-image: url('/Portfolio-v2/public/Bg.svg  ');
+}
+.elemento2 {
+background: rgba(243, 244, 250, 0.35);
+box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.1px);
+-webkit-backdrop-filter: blur(5.1px);
+} */
+
+/* .bg-gradient {
+  animation-name: gradient-fade;
+  animation: gradient-fade 40s linear infinite alternate;
+  background-position: 0 0;
+  background-size: 100% 300%;
+  background-image: radial-gradient(circle,var(--gradient-color3),var(--gradient-color2),var(--gradient-color1));
+} */
+
+@font-face {
+  font-family: 'AlfredinoSemirounded';
+  src: url('/fonts/Alfredino/alfredinosemirounded-semirounded.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlfredinoTuttocurvy';
+  src: url('/fonts/Alfredino/alfredinotuttocurvy-tuttocurvy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlfredinoSemimono';
+  src: url('/fonts/Alfredino/trialalfredinosemimono-semimono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Author';
+  src: url('/fonts/Author/author.ttf') format('truetype') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AuthorItalic';
+  src: url('/fonts/Author/AuthorItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DailyBubble';
+  src: url('/fonts/DailyBubble/DailyBubble.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gemola';
+  src: url('/fonts/Gemola/Gemola.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manusia';
+  src: url('/fonts/Manusia/Manusia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi/Satoshi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SatoshiItalic';
+  src: url('/fonts/Satoshi/SatoshiItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

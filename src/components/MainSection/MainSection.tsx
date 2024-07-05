@@ -5,8 +5,8 @@ export const MainSection = () => {
         <div className="absolute inset-0 bg-opacity-70 backdrop-blur-lg flex items-center justify-center z-30">
           <div className="text-night text-center">
             {/* <Animation/> */}
-            <h1 className="text-4xl font-bold">Frontend Developer</h1>
-            <p className="mt-2">Kevin David Espitia Bautista</p>
+            <h1 className="text-4xl font-manusia font-black tracking-wider">Frontend Developer</h1>
+            <p className="text-xl font-satochi mt-2">Kevin David Espitia Bautista</p>
           </div>
         </div>
         {/* Fondo */}
