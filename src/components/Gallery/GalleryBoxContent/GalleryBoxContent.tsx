@@ -23,10 +23,11 @@ export const GalleryBoxContent = ({
           {text}
         </p>
       </div>
-      <img
+      {children}
+      {/* <img
         className={!className ? "inline-block max-w-full -m-[1vw] border-0" : `${className}`}
-        src={"/images/Frame.png"}
-      />
+        src={"/images/Avatar.png"}
+      /> */}
     </div>
   );
 };

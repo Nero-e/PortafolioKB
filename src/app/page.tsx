@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <>
       <LandingHeader />
-      <main className="relative w-full h-screen overflow-auto snap-y snap-mandatory">
-        <div className="snap-center">
+      <main className="relative w-full h-screen overflow-auto">
+        <div className="">
           <MainSection />
         </div>
-        <div className="snap-start">
+        <div className="">
           <Gallery />
         </div>
       </main>
