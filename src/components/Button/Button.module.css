@@ -13,16 +13,16 @@
 
 .button:hover {
   letter-spacing: 4px;
-  background-color: #0C0C0D;
+  background-color: #5A189A;
   color: hsl(0, 0%, 100%);
-  box-shadow: #0C0C0D 0px 7px 29px 0px;
+  box-shadow: #5A189A 0px 7px 29px 0px;
 }
 
 .button:active {
   letter-spacing: 3px;
   background-color: hsl(24, 191, 220);
   color: hsl(0, 0%, 100%);
-  box-shadow: #0C0C0D 0px 0px 0px 0px;
+  box-shadow: #5A189A 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
 }

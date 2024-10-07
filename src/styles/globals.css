@@ -27,76 +27,54 @@
 }
 .bg-gradient {
   background: linear-gradient(130deg, #ff00b7 0%, #1e00ff 100%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Regular Supreme */
 @font-face {
-  font-family: 'AlfredinoSemirounded';
-  src: url('/fonts/Alfredino/alfredinosemirounded-semirounded.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Supreme';
+  src: url('/fonts/Supreme/Supreme.ttf') format('truetype');
+  font-weight: 400 800;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Italic Supreme*/
 @font-face {
-  font-family: 'AlfredinoTuttocurvy';
-  src: url('/fonts/Alfredino/alfredinotuttocurvy-tuttocurvy.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Supreme';
+  src: url('/fonts/Supreme/SupremeItalic.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: italic;
 }
 
-@font-face {
-  font-family: 'AlfredinoSemimono';
-  src: url('/fonts/Alfredino/trialalfredinosemimono-semimono.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Author';
-  src: url('/fonts/Author/author.ttf') format('truetype') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AuthorItalic';
-  src: url('/fonts/Author/AuthorItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DailyBubble';
-  src: url('/fonts/DailyBubble/DailyBubble.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gemola';
-  src: url('/fonts/Gemola/Gemola.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Manusia';
-  src: url('/fonts/Manusia/Manusia.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Regular Satochi */
 @font-face {
   font-family: 'Satoshi';
   src: url('/fonts/Satoshi/Satoshi.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400 800;
   font-style: normal;
 }
 
+/* Italic Satochi */
 @font-face {
-  font-family: 'SatoshiItalic';
-  src: url('/fonts/Satoshi/SatoshiItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satochi/SatoshiItalic.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: italic;
 }
+
 
 

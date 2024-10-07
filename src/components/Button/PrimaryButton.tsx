@@ -4,12 +4,13 @@ import Link from "next/link";
 interface ButtonProps {
   href: string;
   text: string;
+  download?: string;
 }
 
-export const PrimaryButton = ({ href, text }: ButtonProps) => {
+export const PrimaryButton = ({ href, text, download }: ButtonProps) => {
   return (
     <>
-      <Link href={href} className={`${styles.button}`} aria-label={text}>
+      <Link download={download} target="_black" href={href} className={`${styles.button}`} aria-label={text}>
         {text}
       </Link>
     </>

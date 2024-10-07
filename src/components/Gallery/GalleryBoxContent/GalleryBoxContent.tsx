@@ -3,8 +3,8 @@ import React from "react";
 interface GalleryBoxContentProps {
   children?: React.ReactNode;
   className?: string;
-  tittle: string;
-  text: string;
+  tittle?: string;
+  text?: string;
 }
 
 export const GalleryBoxContent = ({

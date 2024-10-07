@@ -76,16 +76,8 @@ const config: Config = {
 
       // Fonts
       fontFamily: {
-        alfredinoSemirounded: ['AlfredinoSemirounded', 'sans-serif'],
-        alfredinoTuttocurvy: ['AlfredinoTuttocurvy', 'sans-serif'],
-        alfredinoSemimono: ['AlfredinoSemimono', 'monospace'],
-        author: ['Author', 'sans-serif'],
-        authorItalic: ['AuthorItalic', 'sans-serif'],
-        dailyBubble: ['DailyBubble', 'sans-serif'],
-        gemola: ['Gemola', 'sans-serif'],
-        manusia: ['Manusia', 'sans-serif'],
-        satochi: ['Satoshi', 'sans-serif'],
-        satochiItalic: ['SatoshiItalic', 'sans-serif'],
+        satoshi: ['Satoshi', 'sans-serif'],
+        supreme: ['Supreme', 'sans-serif'],
       },
       
       // Transitions
