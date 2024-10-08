@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface GalleryBoxContentProps {
   children?: React.ReactNode;
@@ -11,7 +11,7 @@ export const GalleryBoxContent = ({
   children,
   className,
   tittle,
-  text
+  text,
 }: GalleryBoxContentProps) => {
   return (
     <div className="flex flex-col flex-none justify-between items-center gap-y-5 w-[120%] h-full pt-[2.5vw]">
@@ -24,10 +24,6 @@ export const GalleryBoxContent = ({
         </p>
       </div>
       {children}
-      {/* <img
-        className={!className ? "inline-block max-w-full -m-[1vw] border-0" : `${className}`}
-        src={"/images/Avatar.png"}
-      /> */}
     </div>
   );
 };

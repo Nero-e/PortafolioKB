@@ -23,7 +23,7 @@ export const MainSection = () => {
           />
           <PrimaryButton
             href="/pdf/Curriculum.pdf"
-            text="Curriculum"
+            text="Cv"
             download="Curriculum.pdf"
           />
         </div>

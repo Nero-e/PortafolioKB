@@ -1,8 +1,8 @@
-import { GalleryBoxContent } from "@/src/components/Gallery/GalleryBoxContent";
-import { GalleryBox } from "@/src/components/Gallery/GalleryBox";
-import { TechBadge } from "@/src/components/TechBox/TechBadge";
-import { TechDescription } from "@/src/components/TechBox/TechDescription";
-import { TechTag } from "@/src/components/TechBox/TechTag";
+import { GalleryBoxContent } from '@/src/components/Gallery/GalleryBoxContent';
+import { GalleryBox } from '@/src/components/Gallery/GalleryBox';
+import { TechBadge } from '@/src/components/TechBox/TechBadge';
+import { TechDescription } from '@/src/components/TechBox/TechDescription';
+import { TechTag } from '@/src/components/TechBox/TechTag';
 
 export default function ToolsStack() {
   return (
@@ -17,12 +17,9 @@ export default function ToolsStack() {
             divertirme
           </p>
         </div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {/*Figma card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/images/figma.png" />
               <TechDescription
@@ -35,10 +32,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Notion card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/images/Notion.png" />
               <TechDescription
@@ -52,10 +46,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Css card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/Css.svg" />
               <TechDescription
@@ -69,10 +60,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Github card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/GitHubvs.svg" />
               <TechDescription
@@ -85,10 +73,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* React card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/React.svg" />
               <TechDescription
@@ -102,10 +87,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* JavaScript card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/images/javaScript.png" />
               <TechDescription
@@ -119,10 +101,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Spline card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/images/Spline.png" />
               <TechDescription
@@ -135,10 +114,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Nest card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/Nestvs.svg" />
               <TechDescription
@@ -152,10 +128,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Database card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/Databasevs.svg" />
               <TechDescription
@@ -169,10 +142,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Html card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/Html.svg" />
               <TechDescription
@@ -186,10 +156,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* Nextjs card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/Nextjs.svg" />
               <TechDescription
@@ -203,10 +170,7 @@ export default function ToolsStack() {
             </div>
           </GalleryBox>
           {/* TypeScript card */}
-          <GalleryBox
-            heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]"
-            link="#"
-          >
+          <GalleryBox heightClass="min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[18vw]">
             <div className="flex flex-col justify-center items-center pt-[60px] gap-y-4 p-10">
               <TechBadge src="/svgs/TypeScript.svg" />
               <TechDescription

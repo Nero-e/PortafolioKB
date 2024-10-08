@@ -1,4 +1,9 @@
-import Link from "next/link";
+'use client';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import Link from 'next/link';
+import { useFade } from '@/src/hooks/useFade';
+import { useTap } from '@/src/hooks/useTap';
 
 interface GalleryBoxProps {
   children?: React.ReactNode;
@@ -8,33 +13,53 @@ interface GalleryBoxProps {
   wight?: string;
   heightClass?: string;
 }
-export const GalleryBox = ({
-  children,
-  className,
-  link,
-  border,
-  wight,
-  heightClass,
-}: GalleryBoxProps) => {
+export const GalleryBox = (props: GalleryBoxProps) => {
+  const { children, link, className, border, wight, heightClass } = props;
+
+  const { targeRef, fade } = useFade();
+  const { tap } = useTap();
+
   return (
-    // className="rounded-[4vw] lg:rounded-[2vw] w-full h-full p-[2px] inline-block border-custom"
-    <div className={`flex flex-col p-[1vw] ${className}`}>
-      <Link
-        href={link ? link : "/"}
-        className={`rounded-[4vw] lg:rounded-[80px] w-full h-full p-[1px] inline-block ${
-          border ? "bg-gradient" : "border-custom"
-        }`}
-      >
-        <div
-          className={`flex flex-col  items-center overflow-hidden rounded-[4vw] lg:rounded-[80px] w-full h-full transition-all duration-500 bg-night ${
-            heightClass
-              ? `${heightClass}`
-              : "min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[380px]"
+    <motion.div
+      ref={targeRef}
+      className={`flex flex-col p-[1vw] ${className}`}
+      {...fade}
+      {...tap}
+    >
+      {link ? (
+        <Link
+          href={link}
+          className={`rounded-[4vw] lg:rounded-[80px] w-full h-full p-[1px] inline-block ${
+            border ? 'bg-gradient' : 'border-custom'
           }`}
         >
-          {children}
+          <div
+            className={`flex flex-col items-center overflow-hidden rounded-[4vw] lg:rounded-[80px] w-full h-full transition-all duration-500 bg-night ${
+              heightClass
+                ? `${heightClass}`
+                : 'min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[380px]'
+            }`}
+          >
+            {children}
+          </div>
+        </Link>
+      ) : (
+        <div
+          className={`rounded-[4vw] lg:rounded-[80px] w-full h-full p-[1px] inline-block ${
+            border ? 'bg-gradient' : 'border-custom'
+          }`}
+        >
+          <div
+            className={`flex flex-col items-center overflow-hidden rounded-[4vw] lg:rounded-[80px] w-full h-full transition-all duration-500 bg-night ${
+              heightClass
+                ? `${heightClass}`
+                : 'min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[380px]'
+            }`}
+          >
+            {children}
+          </div>
         </div>
-      </Link>
-    </div>
+      )}
+    </motion.div>
   );
 };
