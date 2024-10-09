@@ -64,20 +64,20 @@ export default function AboutMe() {
               </h3>
               <p className="font-satoshi tracking-wide text-[#8f9094]">
                 A lo largo de mi carrera, he desempeñado diversos roles como
-                <span className="font-bold text-[#9932CC]"> Analista BI</span>,
-                <span className="font-bold text-[#8d3ccf]">
+                <span className="font-bold text-seasalt-200"> Analista BI</span>,
+                <span className="font-bold text-seasalt-200">
                   {" "}
                   Desarrollador de Software
                 </span>{" "}
                 y
-                <span className="font-bold text-[#8d3ccf]">
+                <span className="font-bold text-seasalt-200">
                   {" "}
                   Analista de Aplicaciones
                 </span>
                 , donde participé en la creación de herramientas que optimizaron
                 la productividad y mejoraron el análisis de datos. Durante mi
                 experiencia en
-                <span className="font-bold text-[#8d3ccf]"> Oracle Apex, </span>
+                <span className="font-bold text-seasalt-200"> Oracle Apex, </span>
                 desarrollé aplicaciones clave como una para la gestión del
                 tiempo de los empleados y otra para el análisis de datos
                 mediante dashboards.
@@ -85,16 +85,16 @@ export default function AboutMe() {
                 <br />
                 Actualmente, soy capaz de desarrollar interfaces de usuario
                 interactivas y dinámicas con tecnologías como
-                <span className="font-bold text-[#8d3ccf]"> React</span> y
-                <span className="font-bold text-[#8d3ccf]"> Next.js</span> y
+                <span className="font-bold text-seasalt-200"> React</span> y
+                <span className="font-bold text-seasalt-200"> Next.js</span> y
                 utilizo
-                <span className="font-bold text-[#8d3ccf]"> TypeScript</span> para
+                <span className="font-bold text-seasalt-200"> TypeScript</span> para
                 construir soluciones robustas y escalables. Además, sigo
                 aplicando mis habilidades en la gestión de bases de datos con
-                <span className="font-bold text-[#8d3ccf]"> SQL</span> y
-                <span className="font-bold text-[#8d3ccf]"> PL/SQL </span> 
+                <span className="font-bold text-seasalt-200"> SQL</span> y
+                <span className="font-bold text-seasalt-200"> PL/SQL </span> 
                 mientras que en el backend continúo creando soluciones con
-                <span className="font-bold text-[#8d3ccf]"> NestJS, </span> 
+                <span className="font-bold text-seasalt-200"> NestJS, </span> 
                 manteniéndome alineado con principios sólidos de diseño y
                 arquitectura de software. Esto me permite ofrecer un desarrollo
                 completo y moderno, tanto en el frontend como en el backend.
@@ -103,10 +103,10 @@ export default function AboutMe() {
                 Me gusta enfrentar nuevos desafíos, siempre buscando la mejor
                 manera de resolver problemas a través de un diseño eficiente y
                 la aplicación de los principios{" "}
-                <span className="font-bold text-[#8d3ccf]">SOLID</span> para
+                <span className="font-bold text-seasalt-200">SOLID</span> para
                 escribir código limpio y mantenible. Además, implemento
                 metodologías ágiles como{" "}
-                <span className="font-bold text-[#8d3ccf]">Scrum</span> en la
+                <span className="font-bold text-seasalt-200">Scrum</span> en la
                 gestión de proyectos, asegurando un enfoque colaborativo y ágil.
                 Esta combinación de habilidades me permite ofrecer soluciones
                 completas, desde el frontend hasta el backend y la integración
@@ -126,7 +126,7 @@ export default function AboutMe() {
                 <li>Herramientas de diseño: Figma, Spline.</li>
                 <li>Business Intelligence: Power BI, QlikView, QlikSense.</li>
                 <li>
-                  <Link className="font-bold text-[#8d3ccf]" href={"/toolStack"}>
+                  <Link className="font-bold text-seasalt" href={"/toolStack"}>
                     Más...
                   </Link>
                 </li>

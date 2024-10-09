@@ -77,6 +77,7 @@ const config: Config = {
       // Fonts
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],
+        satoshiItalic: ['SatoshiItalic', 'sans-serif'],
         supreme: ['Supreme', 'sans-serif'],
       },
       

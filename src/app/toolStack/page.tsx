@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { GalleryBoxContent } from '@/src/components/Gallery/GalleryBoxContent';
 import { GalleryBox } from '@/src/components/Gallery/GalleryBox';
 import { TechBadge } from '@/src/components/TechBox/TechBadge';

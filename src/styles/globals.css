@@ -70,8 +70,8 @@
 
 /* Italic Satochi */
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satochi/SatoshiItalic.ttf') format('truetype');
+  font-family: 'SatoshiItalic';
+  src: url('/fonts/Satoshi/SatoshiItalic.ttf') format('truetype');
   font-weight: 400 800;
   font-style: italic;
 }

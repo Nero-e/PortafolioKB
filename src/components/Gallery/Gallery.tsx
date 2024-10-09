@@ -19,7 +19,7 @@ export const Gallery = () => {
             link="/about"
             border
           >
-            <GalleryBoxContent tittle="About me" text="More aboute me">
+            <GalleryBoxContent tittle="Acerca de mí" text="More aboute me">
               {/* Children */}
             </GalleryBoxContent>
           </GalleryBox>
@@ -29,12 +29,12 @@ export const Gallery = () => {
             link="/toolStack"
           >
             <GalleryBoxContent
-              tittle="Tools Stack"
+              tittle="Stack Tecnológico"
               text="Tools that i enjoy to work"
             >
               <Image
                 className="inline-block max-w-full -m-[1vw] border-0"
-                src={'/svgs/FrameS.svg'}
+                src={'/svgs/Frame.svg'}
                 alt="frame"
                 width={500}
                 height={500}
@@ -44,11 +44,11 @@ export const Gallery = () => {
           </GalleryBox>
           {/* Location card */}
           <GalleryBox
-            className="xs:row-start-4 xs:col-span-1 col-start-1 row-start-3 col-span-2 lg:col-span-1 lg:row-span-2 "
+            className="xs:row-start-4 xs:col-span-1 col-start-1 row-start-3 col-span-2 lg:col-span-1 lg:row-span-2"
             border
           >
             <GalleryBoxContent
-              tittle="Location"
+              tittle="Ubicación"
               text="Bogota, Colombia"
               className="inline-block max-w-full sm:w-[50%] lg:w-full -m-[4vw] lg:-m-[1vw] border-0"
             />
@@ -56,14 +56,14 @@ export const Gallery = () => {
           {/* Soft skills card */}
           <GalleryBox className="xs:col-start-1 xs:row-start-5 col-start-1 row-start-4 lg:col-start-2 lg:row-start-2 lg:col-span-2">
             <GalleryBoxContent
-              tittle="Soft Skills"
+              tittle="Habilidades blandas"
               text="My soft skills"
               className="inline-block max-w-full lg:w-[50%] -m-[1vw] lg:-m-[4vw] border-0"
             />
           </GalleryBox>
           {/* Contact card */}
           <GalleryBox className="xs:col-start-1 xs:row-start-6" border>
-            <GalleryBoxContent tittle="Contact" text="Contact with me" />
+            <GalleryBoxContent tittle="Contacto" text="Contact with me" />
           </GalleryBox>
         </div>
       </div>
