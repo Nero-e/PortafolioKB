@@ -33,12 +33,12 @@ export const Gallery = () => {
               text="Tools that i enjoy to work"
             >
               <Image
-                className="inline-block max-w-full -m-[1vw] border-0"
+                className="inline-block max-w-full -mb-[3vw] border-0"
                 src={'/svgs/Frame.svg'}
                 alt="frame"
                 width={500}
                 height={500}
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: 'cover' }}
               />
             </GalleryBoxContent>
           </GalleryBox>

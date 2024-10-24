@@ -1,28 +1,35 @@
 import type { Config } from 'tailwindcss';
+import fluid, { extract, screens } from 'fluid-tailwind';
 
 const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  content: {
+    files: [
+      './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    extract
+  },
+  plugins: [
+    fluid
   ],
   theme: {
+    screens,
     extend: {
-      // Breakpoints
       screens: {
-        'xs': {'max': '639px'},
+        xs: { max: '639px' },
       },
-
       // Grid Template Columns
       gridTemplateColumns: {
         '1.5fr': '1.5fr 1fr',
-        'custom': '1fr 1.5fr 1fr',
+        custom: '1fr 1.5fr 1fr',
       },
 
       // Background Images
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
 
       // Background Size
@@ -32,7 +39,7 @@ const config: Config = {
 
       // Colors
       colors: {
-        'seasalt': {
+        seasalt: {
           DEFAULT: '#F8F8F8',
           '100': '#efefef',
           '200': '#dcdcdc',
@@ -48,7 +55,7 @@ const config: Config = {
           DEFAULT: '#F1F0F1',
           '200': 'rgba(241, 240, 241, 0.7)',
         },
-        'night': {
+        night: {
           '50': '#f5f5f6',
           '100': '#e5e5e8',
           '200': '#ceced3',
@@ -70,8 +77,10 @@ const config: Config = {
       // Box Shadows
       boxShadow: {
         'custom-light': '0 2px 4px rgba(0, 0, 0, 0.1)',
-        'custom-dark-top': '0px 4px 4px rgba(16, 15, 17, 25%), 0px -1px 0px rgba(16, 15, 17, 3%)',
+        'custom-dark-top':
+          '0px 4px 4px rgba(16, 15, 17, 25%), 0px -1px 0px rgba(16, 15, 17, 3%)',
         'custom-dark': '0px 4px 4px rgba(16, 15, 17, 25%)',
+        'custom-nav': '0 30px 60px rgba(0, 0, 0, 0.12)',
       },
 
       // Fonts
@@ -80,12 +89,15 @@ const config: Config = {
         satoshiItalic: ['SatoshiItalic', 'sans-serif'],
         supreme: ['Supreme', 'sans-serif'],
       },
-      
+
       // Transitions
       transitionProperty: {
         'background-position': 'background-position',
-        'border': 'border',
-        'color': 'color',
+        border: 'border',
+        color: 'color',
+      },
+      fontSize: {
+        'clamp6xl/9xl': "clamp(3.75rem /* 60px */,0.71rem /* 11.36px */ + 7.59vw,8rem /* 128px */)",
       },
     },
   },

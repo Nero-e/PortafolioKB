@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function AboutMe() {
   return (
@@ -8,7 +8,7 @@ export default function AboutMe() {
           <header className="relative flex flex-row justify-between items-center w-[calc(100%_+_7rem)] px-14 pt-14 pb-16 -mt-14 mb-12 -left-[3.5rem] border-[#202020] border-b">
             <div className="flex flex-col space-y-8">
               <h2 className="text-3xl font-supreme font-black tracking-wider uppercase">
-                Acerca de mí
+                ⚡Acerca de mí
               </h2>
               <p className="text-sm font-satochi tracking-widest uppercase text-seasalt-300">
                 (¿Quién soy?)
@@ -18,7 +18,7 @@ export default function AboutMe() {
               <div className="absolute flex flex-col items-center justify-center bg-seasalt-100 w-40 h-40 rounded-full overflow-hidden">
                 <img
                   className="relative top-"
-                  src={"/images/perfilbyn.png"}
+                  src={'/images/perfilbyn.png'}
                 ></img>
               </div>
             </div>
@@ -64,20 +64,24 @@ export default function AboutMe() {
               </h3>
               <p className="font-satoshi tracking-wide text-[#8f9094]">
                 A lo largo de mi carrera, he desempeñado diversos roles como
-                <span className="font-bold text-seasalt-200"> Analista BI</span>,
+                <span className="font-bold text-seasalt-200"> Analista BI</span>
+                ,
                 <span className="font-bold text-seasalt-200">
-                  {" "}
+                  {' '}
                   Desarrollador de Software
-                </span>{" "}
+                </span>{' '}
                 y
                 <span className="font-bold text-seasalt-200">
-                  {" "}
+                  {' '}
                   Analista de Aplicaciones
                 </span>
                 , donde participé en la creación de herramientas que optimizaron
                 la productividad y mejoraron el análisis de datos. Durante mi
                 experiencia en
-                <span className="font-bold text-seasalt-200"> Oracle Apex, </span>
+                <span className="font-bold text-seasalt-200">
+                  {' '}
+                  Oracle Apex,{' '}
+                </span>
                 desarrollé aplicaciones clave como una para la gestión del
                 tiempo de los empleados y otra para el análisis de datos
                 mediante dashboards.
@@ -88,13 +92,16 @@ export default function AboutMe() {
                 <span className="font-bold text-seasalt-200"> React</span> y
                 <span className="font-bold text-seasalt-200"> Next.js</span> y
                 utilizo
-                <span className="font-bold text-seasalt-200"> TypeScript</span> para
-                construir soluciones robustas y escalables. Además, sigo
+                <span className="font-bold text-seasalt-200">
+                  {' '}
+                  TypeScript
+                </span>{' '}
+                para construir soluciones robustas y escalables. Además, sigo
                 aplicando mis habilidades en la gestión de bases de datos con
                 <span className="font-bold text-seasalt-200"> SQL</span> y
-                <span className="font-bold text-seasalt-200"> PL/SQL </span> 
+                <span className="font-bold text-seasalt-200"> PL/SQL </span>
                 mientras que en el backend continúo creando soluciones con
-                <span className="font-bold text-seasalt-200"> NestJS, </span> 
+                <span className="font-bold text-seasalt-200"> NestJS, </span>
                 manteniéndome alineado con principios sólidos de diseño y
                 arquitectura de software. Esto me permite ofrecer un desarrollo
                 completo y moderno, tanto en el frontend como en el backend.
@@ -102,10 +109,10 @@ export default function AboutMe() {
                 <br />
                 Me gusta enfrentar nuevos desafíos, siempre buscando la mejor
                 manera de resolver problemas a través de un diseño eficiente y
-                la aplicación de los principios{" "}
+                la aplicación de los principios{' '}
                 <span className="font-bold text-seasalt-200">SOLID</span> para
                 escribir código limpio y mantenible. Además, implemento
-                metodologías ágiles como{" "}
+                metodologías ágiles como{' '}
                 <span className="font-bold text-seasalt-200">Scrum</span> en la
                 gestión de proyectos, asegurando un enfoque colaborativo y ágil.
                 Esta combinación de habilidades me permite ofrecer soluciones
@@ -126,7 +133,7 @@ export default function AboutMe() {
                 <li>Herramientas de diseño: Figma, Spline.</li>
                 <li>Business Intelligence: Power BI, QlikView, QlikSense.</li>
                 <li>
-                  <Link className="font-bold text-seasalt" href={"/toolStack"}>
+                  <Link className="font-bold text-seasalt" href={'/toolStack'}>
                     Más...
                   </Link>
                 </li>
