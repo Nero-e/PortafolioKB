@@ -1,0 +1,1 @@
+export { TechDescription } from './TechDescription';

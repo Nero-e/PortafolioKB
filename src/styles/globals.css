@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Regular Satochi */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: normal;
+}
+
+/* Italic Satochi */
+@font-face {
+  font-family: "SatoshiItalic";
+  src: url("/fonts/Satoshi/SatoshiItalic.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: italic;
+}
+
+.border-custom {
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-color: #474747;
+  border-bottom-style: solid;
+}
+.bg-gradient {
+  background: linear-gradient(130deg, #ff00b7 0%, #1e00ff 100%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.box {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
