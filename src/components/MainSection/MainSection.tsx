@@ -5,12 +5,13 @@ import { PrimaryButton } from "../Button";
 import { Animation } from "./Animation/Animation";
 
 export const MainSection = () => {
-  const { greetings, name, content, paragraph, button, canvas } = useMainAnima();
+  const { greetings, name, content, paragraph, button, canvas } =
+    useMainAnima();
 
   return (
     <section className="relative flex items-center justify-center h-screen overflow-hidden py-5 px-12 bg-seasalt">
       <div className="relative flex flex-col w-full font-satoshi text-left  max-w-[1400px] z-20 duration-500 leading-none">
-        <p ref={greetings} className="text-2xl/3xl font-bold text-[#5A189A]">
+        <p ref={greetings} className="text-2xl/3xl font-bold text-tekgelet">
           {/* 👋  */}
           ¡Hola!, Soy-
         </p>
@@ -51,7 +52,7 @@ export const MainSection = () => {
       </div>
       <div
         ref={canvas}
-        className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%] transition-all ease-linear"
+        className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%]"
       >
         <Animation />
       </div>

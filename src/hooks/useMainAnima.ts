@@ -47,8 +47,8 @@ export const useMainAnima = () => {
       )
       .fromTo(
         canvas.current,
-        { opacity: 0, x: window.innerWidth / 2 },
-        { opacity: 1, x: 0, duration: 1, ease: "power2.out" },
+        { opacity: 0, scale: 0.5, rotate: 90 },
+        { opacity: 1, scale: 1, rotate: 0, duration: 2, ease: "power2" },
         ""
       );
     return () => anima.kill();
