@@ -6,7 +6,7 @@ import { PhotoCard } from "./PhotoCard";
 
 export const Gallery = () => {
   return (
-    <section className="flex flex-col overflow-hidden w-full h-full min-h-screen py-48 px-[10vw] bg-night">
+    <section className="flex flex-col overflow-hidden w-full h-full min-h-screen py-48 px-[10vw] bg-night z-10">
       <div className="gap-6 w-full h-full max-w-[1400px] mx-auto">
         <div className="grid xs:grid-cols-1 xs:grid-rows-6 grid-cols-2 grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-6">
           {/* Gallery items */}
@@ -16,8 +16,8 @@ export const Gallery = () => {
           </div>
           {/* About Cardd */}
           <GalleryBox className="sm:col-start-2" link="/about">
-            <div className="absolute pt-[2.5vw] py-10 text-center z-20">
-              <h1 className="text-xl font-satoshi font-medium tracking-wider text-seasalt">
+            <div className="absolute p-8 text-center z-20">
+              <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Acerca de mi
               </h1>
             </div>
@@ -40,10 +40,10 @@ export const Gallery = () => {
           >
             <GalleryContent
               tittle="Stack Tecnológico"
-              text="Tools that i enjoy to work"
+              text="Herramientas y tegnologias"
             >
               <Image
-                className="relative inline-block max-w-full sm:-m-[10vw] md:-m-[3vw] border-0 overflow-hidden"
+                className="relative inline-block max-w-full -m-[10vw] md:-m-[4vw] xl:-m-[2vw] border-0 overflow-hidden"
                 src={"/svgs/frame.svg"}
                 alt="frame"
                 width={500}
@@ -53,29 +53,29 @@ export const Gallery = () => {
           </GalleryBox>
           {/* Location card */}
           <GalleryBox className="sm:col-start-1 sm:row-start-2 sm:row-span-2 lg:col-span-1 lg:row-span-2">
-            <div className="relative flex flex-col items-center pt-[2.5vw] p-[1vw] z-20 w-full h-full overflow-hidden">
-              <h1 className="text-xl font-satoshi font-medium tracking-wider text-seasalt">
+            <div className="relative flex flex-col text-center w-full h-full p-8">
+              <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Ubicación
               </h1>
-              <p className="mb-10 text-sm font-satoshiItalic text-flash-white-200">
+              <p className="text-sm font-satoshiItalic text-flash-white-200 mb-3">
                 Bogotá, Colombia
               </p>
-              <div className="relative flex justify-center items-center w-full h-full">
-                <div className="absolute flex flex-col items-center justify-center w-full overflow-hidden">
+              <div className="relative w-full h-full">
+                <div className="absolute inset-0 sm:relative sm:w-full h-full w-full sm:max-w-full sm:pt-8">
                   <Image
                     src={"/svgs/map.svg"}
                     alt="About me"
-                    className="relative rounded-[4vw] lg:rounded-[80px]"
+                    className="w-full h-full object-cover rounded-[4vw] lg:rounded-[80px]"
                     width={800}
                     height={800}
-                  ></Image>
+                  />
                 </div>
               </div>
             </div>
           </GalleryBox>
           {/* Soft skills card */}
-          <GalleryBox className="sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2">
-            <div className="relative flex flex-col items-center p-[2.5vw] z-20 bg-[url('/images/square.png')] bg-cover w-full h-full overflow-hidden">
+          <GalleryBox className="xs:row-span-2 sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2">
+            <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
               {/* Título */}
               <div className="space-y-5">
                 <h1 className="text-xl font-satoshi font-medium tracking-wider text-seasalt">
@@ -84,49 +84,63 @@ export const Gallery = () => {
               </div>
               {/* contenedor */}
               <div className="relative mt-5 w-full h-full">
-                <div className="absolute flex flex-row justify-center items-center w-full h-full">
-                  <div className="flex flex-col justify-center space-y-20 text-right items-center w-full h-full">
-                    <div className="pr-5">
-                      <h1 className="text-base font-satoshi font-medium tracking-wider text-seasalt">
-                        Trabajo en Equipo
-                      </h1>
-                      <p className="text-xs font-satoshiItalic text-flash-white-200">
-                        Colaboro eficientemente para lograr objetivos comunes.
-                      </p>
-                    </div>
-                    <div className="pr-5">
-                      <h1 className="text-base font-satoshi font-medium tracking-wider text-seasalt">
-                        Adaptabilidad
-                      </h1>
-                      <p className="text-xs font-satoshiItalic text-flash-white-200">
-                        Me ajusto rápidamente a cambios y nuevos desafíos.
-                      </p>
-                    </div>
-                  </div>
+                <div className="absolute flex flex-col items-center w-full h-full xs:flex sm:hidden">
                   {/* imagen */}
-                  <div className="flex justify-center items-center  w-full h-full m-auto">
-                    <div className="relative flex justify-center items-center w-[300px] h-full">
+                  <div className="p-10">
+                    <Image
+                      src={"/images/cubsm.png"}
+                      alt="About me"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  {/* texto */}
+                  <div className="flex flex-col space-y-5 px-5 text-left">
+                    <ContentBlock
+                      title="Trabajo en Equipo"
+                      text="Colaboro eficientemente para lograr objetivos comunes."
+                    />
+                    <ContentBlock
+                      title="Adaptabilidad"
+                      text="Me ajusto rápidamente a cambios y nuevos desafíos."
+                    />
+                    <ContentBlock
+                      title="Resolución de Problemas"
+                      text="Abordo los retos con soluciones innovadoras y bien pensadas."
+                    />
+                  </div>
+                </div>
+                {/* Layout para pantallas mayores a XS */}
+                <div className="hidden sm:flex flex-row w-full h-full">
+                  <div className="flex flex-col justify-center md:space-y-5 xl:space-y-20 text-right items-center w-full h-full pr-5">
+                    <ContentBlock
+                      title="Trabajo en Equipo"
+                      text="Colaboro eficientemente para lograr objetivos comunes."
+                    />
+                    <ContentBlock
+                      title="Adaptabilidad"
+                      text="Me ajusto rápidamente a cambios y nuevos desafíos."
+                    />
+                  </div>
+                  {/* imagen centrada */}
+                  <div className="hidden xs:hidden sm:flex justify-center items-center w-full h-full">
+                    <div className="relative flex justify-center items-center md:w-[200px] xl:w-[300px] h-full">
                       <div className="absolute flex flex-col items-center justify-center w-full overflow-hidden">
                         <Image
-                          src={"/svgs/cub.svg"}
+                          src="/svgs/cub.svg"
                           alt="About me"
                           className="relative"
                           width={800}
                           height={800}
-                        ></Image>
+                        />
                       </div>
                     </div>
                   </div>
-                  <div className=" flex flex-col justify-center items-center w-full h-full">
-                    <div className="pl-5">
-                      <h1 className="text-base font-satoshi font-medium tracking-wider text-seasalt">
-                        Resolución de Problemas
-                      </h1>
-                      <p className="text-xs font-satoshiItalic text-flash-white-200">
-                        Abordo los retos con soluciones innovadoras y bien
-                        pensadas.
-                      </p>
-                    </div>
+                  <div className="flex flex-col justify-center items-center w-full h-full pl-5">
+                    <ContentBlock
+                      title="Resolución de Problemas"
+                      text="Abordo los retos con soluciones innovadoras y bien pensadas."
+                    />
                   </div>
                 </div>
               </div>
@@ -134,10 +148,51 @@ export const Gallery = () => {
           </GalleryBox>
           {/* Contact card */}
           <GalleryBox className="sm:col-start-2 sm:row-start-3" border>
-            <GalleryContent tittle="Contacto" text="Contact with me" />
+            {/* <GalleryContent tittle="Contacto" text="Enviame un mensaje" /> */}
+            <div className="relative flex flex-col text-center w-full h-full p-8">
+              <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
+                Contacto
+              </h1>
+              <p className="text-sm font-satoshiItalic text-flash-white-200 mb-3">
+                Enviame un mensaje
+              </p>
+              <form className="flex font-satoshi flex-col text-left max-w-md mx-4 space-y-4 tracking-wider">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Asunto"
+                  required
+                  className="w-full rounded p-2 border-custom bg-night text-seasalt"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Mensaje"
+                  required
+                  className="w-full p-2 rounded border-custom bg-night text-seasalt"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-tekgelet text-white rounded"
+                >
+                  Enviar
+                </button>
+                <p>{}</p>
+              </form>
+            </div>
           </GalleryBox>
         </div>
       </div>
     </section>
   );
 };
+
+function ContentBlock({ title, text }: { title: string; text: string }) {
+  return (
+    <div>
+      <h1 className="text-lg xl:text-base font-satoshi font-medium tracking-wider text-seasalt">
+        {title}
+      </h1>
+      <p className="text-sm xl:text-xs font-satoshiItalic text-flash-white-200">{text}</p>
+    </div>
+  );
+}
