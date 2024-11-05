@@ -8,14 +8,14 @@ export const Gallery = () => {
   return (
     <section className="flex flex-col overflow-hidden w-full h-full min-h-screen py-48 px-[10vw] bg-night z-10">
       <div className="gap-6 w-full h-full max-w-[1400px] mx-auto">
-        <div className="grid xs:grid-cols-1 xs:grid-rows-6 grid-cols-2 grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-6">
+        <div className="grid xs:grid-cols-1 xs:grid-rows-6 sm:grid-cols-1 sm:grid-rows-6 md:grid-cols-2 md:grid-rows-4 xl:grid-cols-3 xl:grid-rows-3 gap-y-6">
           {/* Gallery items */}
           {/* Photo card */}
-          <div className="flex justify-center p-[1vw] xs:col-start-1 xs:row-start-1 xs:row-span-1 col-span-1 row-span-1 lg:row-span-1">
+          <div className="flex justify-center p-[1vw] sm:col-start-1 sm:row-start-1 sm:row-span-1 col-span-1 row-span-1 lg:row-span-1">
             <PhotoCard />
           </div>
           {/* About Cardd */}
-          <GalleryBox className="sm:col-start-2" link="/about">
+          <GalleryBox className="md:col-start-2" link="/about">
             <div className="absolute p-8 text-center z-20">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Acerca de mi
@@ -35,7 +35,7 @@ export const Gallery = () => {
           </GalleryBox>
           {/* Tool stack card */}
           <GalleryBox
-            className="sm:col-start-2 sm:row-start-2 lg:col-start-3 lg:row-start-1"
+            className="md:col-start-2 md:row-start-2 xl:col-start-3 xl:row-start-1"
             link="/techStack"
           >
             <GalleryContent
@@ -52,7 +52,7 @@ export const Gallery = () => {
             </GalleryContent>
           </GalleryBox>
           {/* Location card */}
-          <GalleryBox className="sm:col-start-1 sm:row-start-2 sm:row-span-2 lg:col-span-1 lg:row-span-2">
+          <GalleryBox className="md:col-start-1 md:row-start-2 md:row-span-2 xl:col-span-1 xl:row-span-2">
             <div className="relative flex flex-col text-center w-full h-full p-8">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Ubicación
@@ -61,7 +61,7 @@ export const Gallery = () => {
                 Bogotá, Colombia
               </p>
               <div className="relative w-full h-full">
-                <div className="absolute inset-0 sm:relative sm:w-full h-full w-full sm:max-w-full sm:pt-8">
+                <div className="absolute inset-0 md:relative md:w-full h-full w-full md:max-w-full md:pt-8">
                   <Image
                     src={"/svgs/map.svg"}
                     alt="About me"
@@ -74,8 +74,9 @@ export const Gallery = () => {
             </div>
           </GalleryBox>
           {/* Soft skills card */}
-          <GalleryBox className="xs:row-span-2 sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2">
-            <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
+          {/* sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2 */}
+          <GalleryBox className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1">
+          <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
               {/* Título */}
               <div className="space-y-5">
                 <h1 className="text-xl font-satoshi font-medium tracking-wider text-seasalt">
@@ -84,7 +85,7 @@ export const Gallery = () => {
               </div>
               {/* contenedor */}
               <div className="relative mt-5 w-full h-full">
-                <div className="absolute flex flex-col items-center w-full h-full xs:flex sm:hidden">
+                <div className="absolute flex flex-col items-center w-full h-full xs:flex md:hidden">
                   {/* imagen */}
                   <div className="p-10">
                     <Image
@@ -111,7 +112,7 @@ export const Gallery = () => {
                   </div>
                 </div>
                 {/* Layout para pantallas mayores a XS */}
-                <div className="hidden sm:flex flex-row w-full h-full">
+                <div className="hidden md:flex flex-row w-full h-full">
                   <div className="flex flex-col justify-center md:space-y-5 xl:space-y-20 text-right items-center w-full h-full pr-5">
                     <ContentBlock
                       title="Trabajo en Equipo"
@@ -123,7 +124,7 @@ export const Gallery = () => {
                     />
                   </div>
                   {/* imagen centrada */}
-                  <div className="hidden xs:hidden sm:flex justify-center items-center w-full h-full">
+                  <div className="hidden sm:hidden md:flex justify-center items-center w-full h-full">
                     <div className="relative flex justify-center items-center md:w-[200px] xl:w-[300px] h-full">
                       <div className="absolute flex flex-col items-center justify-center w-full overflow-hidden">
                         <Image
@@ -145,10 +146,10 @@ export const Gallery = () => {
                 </div>
               </div>
             </div>
+
           </GalleryBox>
           {/* Contact card */}
-          <GalleryBox className="sm:col-start-2 sm:row-start-3" border>
-            {/* <GalleryContent tittle="Contacto" text="Enviame un mensaje" /> */}
+          <GalleryBox className="md:col-start-2 md:row-start-3" border>
             <div className="relative flex flex-col text-center w-full h-full p-8">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Contacto
@@ -192,7 +193,9 @@ function ContentBlock({ title, text }: { title: string; text: string }) {
       <h1 className="text-lg xl:text-base font-satoshi font-medium tracking-wider text-seasalt">
         {title}
       </h1>
-      <p className="text-sm xl:text-xs font-satoshiItalic text-flash-white-200">{text}</p>
+      <p className="text-sm xl:text-xs font-satoshiItalic text-flash-white-200">
+        {text}
+      </p>
     </div>
   );
 }

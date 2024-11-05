@@ -48,7 +48,7 @@ export const GalleryBox = (props: GalleryBoxProps) => {
             className={`relative flex flex-col items-center overflow-hidden rounded-[4vw] lg:rounded-[80px] w-full h-full transition-all duration-500 bg-night ${
               heightClass
                 ? `${heightClass}`
-                : "min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[380px]"
+                : "min-h-[300px] sm:min-h-[380px] md:min-h-[300px] lg:min-h-[30vw] xl:min-h-[22vw] 2xl:min-h-[380px]"
             }`}
           >
             {children}
@@ -66,7 +66,7 @@ export const GalleryBox = (props: GalleryBoxProps) => {
             className={`flex flex-col items-center overflow-hidden rounded-[4vw] lg:rounded-[80px] w-full h-full transition-all duration-500 bg-night ${
               heightClass
                 ? `${heightClass}`
-                : "min-h-[300px] lg:min-h-[22vw] 2xl:min-h-[380px]"
+                : "min-h-[300px] sm:min-h-[380px] md:min-h-[300px] lg:min-h-[30vw] xl:min-h-[22vw] 2xl:min-h-[380px]"
             }`}
           >
             {children}
