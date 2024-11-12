@@ -1,10 +1,28 @@
+"use client";
 import Image from "next/image";
-
+import { useState } from "react";
 import { GalleryBox } from "./GalleryBox";
 import { GalleryContent } from "./GalleryContent";
 import { PhotoCard } from "./PhotoCard";
+import { ContactForm } from "./Form";
+import { Notification } from "./Form/Notification/Notificaction";
 
 export const Gallery = () => {
+  const [notification, setNotification] = useState({
+    visible: false,
+    status: "",
+    message: "",
+  });
+
+  const showNotification = (status: "success" | "error", message: string) => {
+    setNotification({ visible: true, status, message });
+
+    // Ocultar la notificación después de un tiempo
+    setTimeout(() => {
+      setNotification({ visible: false, status: "", message: "" });
+    }, 3000);
+  };
+
   return (
     <section className="flex flex-col overflow-hidden w-full h-full min-h-screen py-48 px-[10vw] bg-night z-10">
       <div className="gap-6 w-full h-full max-w-[1400px] mx-auto">
@@ -76,7 +94,7 @@ export const Gallery = () => {
           {/* Soft skills card */}
           {/* sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2 */}
           <GalleryBox className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1">
-          <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
+            <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
               {/* Título */}
               <div className="space-y-5">
                 <h1 className="text-xl font-satoshi font-medium tracking-wider text-seasalt">
@@ -146,41 +164,21 @@ export const Gallery = () => {
                 </div>
               </div>
             </div>
-
           </GalleryBox>
           {/* Contact card */}
           <GalleryBox className="md:col-start-2 md:row-start-3" border>
-            <div className="relative flex flex-col text-center w-full h-full p-8">
-              <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
-                Contacto
-              </h1>
-              <p className="text-sm font-satoshiItalic text-flash-white-200 mb-3">
-                Enviame un mensaje
-              </p>
-              <form className="flex font-satoshi flex-col text-left max-w-md mx-4 space-y-4 tracking-wider">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Asunto"
-                  required
-                  className="w-full rounded p-2 border-custom bg-night text-seasalt"
-                />
-                <textarea
-                  name="message"
-                  placeholder="Mensaje"
-                  required
-                  className="w-full p-2 rounded border-custom bg-night text-seasalt"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-tekgelet text-white rounded"
-                >
-                  Enviar
-                </button>
-                <p>{}</p>
-              </form>
-            </div>
+            <ContactForm showNotification={showNotification} />
           </GalleryBox>
+          {/* Notification */}
+          {notification.visible && (
+            <Notification
+              status={notification.status}
+              message={notification.message}
+              onClose={() =>
+                setNotification({ visible: true, status: "", message: "" })
+              }
+            />
+          )}
         </div>
       </div>
     </section>

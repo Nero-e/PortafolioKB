@@ -3,9 +3,7 @@
 import { motion, useMotionValue } from "framer-motion";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { PaintBrushIcon } from "@heroicons/react/24/outline";
-import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { AcademicCapIcon } from "@heroicons/react/24/outline";
-import { MusicalNoteIcon } from "@heroicons/react/24/outline";
 
 import { HeaderIcon } from "../HeaderItem";
 
@@ -31,12 +29,6 @@ export const HeaderContent = () => {
       <HeaderIcon text="" href="/techStack" mouseX={mouseX}>
         <AcademicCapIcon className="text-black size-5" />
       </HeaderIcon>
-      {/* <HeaderIcon text="" href="/" mouseX={mouseX}>
-        <RocketLaunchIcon className="text-black size-5" />
-      </HeaderIcon>
-      <HeaderIcon text="" href="/" mouseX={mouseX}>
-        <MusicalNoteIcon className="text-black size-5" />
-      </HeaderIcon> */}
     </motion.div>
   );
 };
