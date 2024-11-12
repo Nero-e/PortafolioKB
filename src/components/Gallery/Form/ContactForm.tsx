@@ -6,7 +6,6 @@ interface ContactFormProps {
 }
 
 export const ContactForm = ({ showNotification }: ContactFormProps) => {
-
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
@@ -26,7 +25,10 @@ export const ContactForm = ({ showNotification }: ContactFormProps) => {
       });
 
       if (response.ok) {
-        showNotification("success", "El correo se envió correctamente. Responderé lo más pronto posible.");
+        showNotification(
+          "success",
+          "Te responderé lo más pronto posible."
+        );
         setSubject("");
         setMessage("");
       } else {
@@ -37,8 +39,6 @@ export const ContactForm = ({ showNotification }: ContactFormProps) => {
       showNotification("error", "Error: No se pudo enviar el correo.");
     }
   };
-
-
 
   return (
     <div className="flex flex-col text-center w-full h-full p-8">
@@ -79,5 +79,3 @@ export const ContactForm = ({ showNotification }: ContactFormProps) => {
     </div>
   );
 };
-
-
