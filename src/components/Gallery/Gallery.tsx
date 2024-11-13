@@ -33,7 +33,7 @@ export const Gallery = () => {
             <PhotoCard />
           </div>
           {/* About Cardd */}
-          <GalleryBox className="md:col-start-2" link="/about">
+          <GalleryBox className="md:col-start-2" link="/about" isAnimated>
             <div className="absolute p-8 text-center z-20">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Acerca de mi
@@ -55,6 +55,7 @@ export const Gallery = () => {
           <GalleryBox
             className="md:col-start-2 md:row-start-2 xl:col-start-3 xl:row-start-1"
             link="/techStack"
+            isAnimated
           >
             <GalleryContent
               tittle="Stack Tecnológico"
@@ -70,7 +71,7 @@ export const Gallery = () => {
             </GalleryContent>
           </GalleryBox>
           {/* Location card */}
-          <GalleryBox className="md:col-start-1 md:row-start-2 md:row-span-2 xl:col-span-1 xl:row-span-2">
+          <GalleryBox className="md:col-start-1 md:row-start-2 md:row-span-2 xl:col-span-1 xl:row-span-2" isAnimated>
             <div className="relative flex flex-col text-center w-full h-full p-8">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Ubicación
@@ -93,7 +94,7 @@ export const Gallery = () => {
           </GalleryBox>
           {/* Soft skills card */}
           {/* sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2 */}
-          <GalleryBox className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1">
+          <GalleryBox className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1" isAnimated>
             <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
               {/* Título */}
               <div className="space-y-5">
@@ -155,7 +156,7 @@ export const Gallery = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col justify-center items-center w-full h-full pl-5">
+                  <div className="flex flex-col justify-center items-center text-left w-full h-full pl-5">
                     <ContentBlock
                       title="Resolución de Problemas"
                       text="Abordo los retos con soluciones innovadoras y bien pensadas."

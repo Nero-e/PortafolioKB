@@ -17,7 +17,7 @@ export const HeaderContent = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="flex items-end h-16 mx-auto px-4 pb-3 gap-4 rounded-full backdrop-blur-sm bg-flash-white-200 shadow-custom-nav z-40"
+      className="flex items-end h-16 mx-auto px-4 pb-3 gap-4 rounded-full backdrop-blur-xl bg-[#0000001a] border-b-2 border-[#ffffffcb] z-40"
     >
       <div></div>
       <HeaderIcon text="" href="/" mouseX={mouseX}>

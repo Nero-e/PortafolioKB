@@ -32,9 +32,9 @@ export const HeaderIcon = ({ mouseX, href, children }: HeaderIconProps) => {
       <motion.div
         ref={ref}
         style={{ width }}
-        className="flex justify-center items-center aspect-square w-10 rounded-full backdrop-blur-sm cursor-pointer uppercase bg-gradient-to-br from-seasalt-200 to-flash-white-200 shadow-custom-dark"
+        className="flex justify-center items-center aspect-square w-10 rounded-full backdrop-blur-sm cursor-pointer uppercase bg-seasalt-100"
       >
-        <div className="">
+        <div className="opacity-50">
         {children}
         </div>
       </motion.div>

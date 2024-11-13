@@ -23,14 +23,14 @@ export const MainSection = () => {
           className="text-xl/3xl font-semibold md:w-[60%] text-night mt-10 whitespace-pre-wrap"
         >
           Desarrollador de Software.{" "}
-          <span className="font-normal text-[#49494a]">
+          <span className="font-normal text-[#8f9094]">
             Autodidacta con interés en la programación
           </span>
         </p>
         <div
           ref={paragraph}
           style={{ opacity: 0 }}
-          className="text-lg/xl text-[#49494a] my-8 space-y-2"
+          className="text-lg/xl text-[#8f9094] my-8 space-y-2"
         >
           <p>✨ Desarrollador Frontend especializado en React & Next.js</p>
           <p>💥 Experto en SQL y PL/SQL para la gestión de bases de datos</p>

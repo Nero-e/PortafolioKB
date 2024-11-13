@@ -1,8 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export const useFade = (ref: React.RefObject<HTMLDivElement>) => {
   useGSAP(() => {
@@ -18,13 +18,13 @@ export const useFade = (ref: React.RefObject<HTMLDivElement>) => {
           scale: 1,
           duration: 0.5,
           ease: "power1.out",
-          // scrollTrigger: {
-          //   trigger: ref.current,
-          //   start: "top 100%",
-          //   end: "bottom 70%",
-          //   toggleActions: "play none none none",
-          //   once: true,
-          // },
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 100%",
+            end: "bottom 70%",
+            toggleActions: "play none none none",
+            once: true,
+          },
         }
       );
     }

@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 import { useHover } from "@/src/hooks/useHover";
 import { useTap } from "@/src/hooks/useTap";
-// import { useFade } from "@/src/hooks/useFade";
+import { useFade } from "@/src/hooks/useFade";
 
 interface GalleryBoxProps {
   children?: React.ReactNode;
@@ -12,10 +12,11 @@ interface GalleryBoxProps {
   className?: string;
   border?: boolean;
   heightClass?: string;
+  isAnimated?: boolean;
 }
 
 export const GalleryBox = (props: GalleryBoxProps) => {
-  const { children, link, className, border, heightClass } = props;
+  const { children, link, className, border, heightClass, isAnimated } = props;
 
   const box = useRef<HTMLDivElement>(null);
   const [isScale, setIsScale] = useState(false);
@@ -26,15 +27,15 @@ export const GalleryBox = (props: GalleryBoxProps) => {
     setIsScale
   );
   const { handleMouseDown, handleMouseUp } = useTap(box);
-  // useFade(box);
+  useFade(box);
 
   return (
     <div
       ref={box}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
+      onMouseDown={isAnimated ? handleMouseDown : undefined}
+      onMouseUp={isAnimated ? handleMouseUp : undefined}
       className={`flex flex-col p-[1vw] ${className}`}
     >
       {link ? (

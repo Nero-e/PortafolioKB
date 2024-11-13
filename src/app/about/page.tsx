@@ -138,7 +138,7 @@ export default function About() {
                 <li>Herramientas de diseño: Figma, Spline.</li>
                 <li>Business Intelligence: Power BI, QlikView, QlikSense.</li>
                 <li>
-                  <Link className="font-bold text-seasalt" href={"/toolStack"}>
+                  <Link className="font-bold text-seasalt" href={"/techStack"}>
                     Más...
                   </Link>
                 </li>
