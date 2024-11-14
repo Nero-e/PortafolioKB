@@ -21,7 +21,7 @@ export const useFade = (ref: React.RefObject<HTMLDivElement>) => {
           scrollTrigger: {
             trigger: ref.current,
             start: "top 100%",
-            end: "bottom 70%",
+            end: "bottom 90%",
             toggleActions: "play none none none",
             once: true,
           },

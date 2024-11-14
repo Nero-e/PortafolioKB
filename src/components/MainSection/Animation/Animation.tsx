@@ -7,3 +7,4 @@ export const Animation = () => {
     <Spline scene="https://prod.spline.design/zakkNIRjIeApXCwo/scene.splinecode"></Spline>
   );
 };
+export default Animation;

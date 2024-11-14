@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body className="selection:bg-night selection:text-seasalt">
         <Header />
         {children}
       </body>

@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function About() {
   return (
     <section className="flex w-full h-full overflow-hidden p-5 bg-night text-seasalt-100 justify-center">
-      <div className="flex flex-col w-[1400px] h-full p-16">
-        <article className="flex flex-col p-14 shadow-sm border-custom bg-night">
+      <div className="flex flex-col w-[1400px] min-w-[400px] h-full xs:px-1 md:px-16 py-16">
+        <article className="flex flex-col xs:px-5 sm:px-5 md:px-14 py-14 shadow-sm border-custom bg-night">
           <header className="relative flex flex-row justify-between items-center w-[calc(100%_+_7rem)] px-14 pt-14 pb-16 -mt-14 mb-12 -left-[3.5rem] border-[#202020] border-b">
             <div className="flex flex-col space-y-8">
               <h2 className="text-3xl font-supreme font-black tracking-wider uppercase">
@@ -15,8 +15,8 @@ export default function About() {
                 (¿Quién soy?)
               </p>
             </div>
-            <div className="relative flex justify-center items-center w-36 h-20">
-              <div className="absolute flex flex-col items-center justify-center w-40 aspect-square rounded-full overflow-hidden">
+            <div className="relative xs:hidden flex justify-center items-center w-36 h-20">
+              <div className="absolute  flex flex-col items-center justify-center w-40 aspect-square rounded-full overflow-hidden">
                 <Image
                   src={"/images/perfilbyn.png"}
                   alt="Foto de Perfil"
