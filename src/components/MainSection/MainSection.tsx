@@ -1,9 +1,7 @@
 "use client";
-
-import { useEffect ,useState } from "react";
 import dynamic from "next/dynamic";
 
-import { useMainAnima } from "@/src/hooks/useMainAnima";
+// import { useMainAnima } from "@/src/hooks/useMainAnima";
 import { PrimaryButton } from "../Button";
 import CirucleLoader from "../Loaders/CirculeLoader";
 const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
@@ -12,37 +10,28 @@ const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
 });
 
 export const MainSection = () => {
-  const { greetings, name, content, paragraph, button, canvas } = useMainAnima();
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const { greetings, name, content, paragraph, button, canvas } = useMainAnima();
 
-  useEffect(() => {
-    if (isLoaded) {
-      
-    }
-  }, [isLoaded, setIsLoaded]);
 
   return (
     <section className="relative flex items-center justify-center h-screen overflow-hidden py-5 px-12 bg-seasalt">
       <div className="relative flex flex-col w-full font-satoshi text-left  max-w-[1400px] z-20 duration-500 leading-none">
         <p
-          ref={greetings}
+          // ref={greetings}
           className="text-2xl/3xl font-bold text-tekgelet"
-          style={{ opacity: 0 }}
         >
           {/* 👋  */}
           ¡Hola!, Soy-
         </p>
         <h1
-          ref={name}
+          // ref={name}
           className="text-6xl/9xl font-bold text-night"
-          style={{ opacity: 0 }}
         >
           Kevin Espitia.
         </h1>
         <p
-          ref={content}
+          // ref={content}
           className="text-xl/3xl font-semibold md:w-[60%] text-night mt-5  whitespace-pre-wrap"
-          style={{ opacity: 0 }}
         >
           Desarrollador de Software.{" "}
           <span className="font-normal text-[#8f9094]">
@@ -50,17 +39,15 @@ export const MainSection = () => {
           </span>
         </p>
         <div
-          ref={paragraph}
-          style={{ opacity: 0 }}
+          // ref={paragraph}
           className="text-lg/xl text-[#8f9094] my-8 space-y-2 font-satoshiItalic"
         >
           <p>✨ Desarrollador Frontend especializado en React & Next.js</p>
           <p>💥 Experto en SQL y PL/SQL para la gestión de bases de datos</p>
         </div>
         <div
-          ref={button}
+          // ref={button}
           className="flex justify-center md:justify-start space-x-4 mt-4 font-satochi"
-          style={{ opacity: 0 }}
         >
           <PrimaryButton
             href="https://www.linkedin.com/in/kespitia"
@@ -74,10 +61,8 @@ export const MainSection = () => {
         </div>
       </div>
       <div
-        ref={canvas}
+        // ref={canvas}
         className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%]"
-        style={{ opacity: 0 }}
-        onLoad={() => {console.log('cargando')}}
       >
         <LazySplineAnima />
       </div>
