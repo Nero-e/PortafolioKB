@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="relative w-full h-full min-h-screen overflow-auto">
       <MainSection />
-      <Gallery />
+      {/* <Gallery /> */}
     </main>
   );
 }
