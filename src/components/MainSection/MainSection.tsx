@@ -1,13 +1,13 @@
 "use client";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 import { useAnima } from "@/src/hooks/useMainAnima";
-import { PrimaryButton } from "../Button";
-import CirucleLoader from "../Loaders/CirculeLoader";
-const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
-  ssr: false,
-  loading: () => <CirucleLoader />
-});
+// import { PrimaryButton } from "../Button";
+// import CirucleLoader from "../Loaders/CirculeLoader";
+// const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
+//   ssr: false,
+//   loading: () => <CirucleLoader />
+// });
 
 export const MainSection = () => {
   // const { greetings, name, content, paragraph, button, canvas } = useMainAnima();

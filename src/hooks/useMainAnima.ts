@@ -1,7 +1,7 @@
 // hooks/useMainAnima.ts
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import {useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 type AnimationOptions = {
@@ -14,7 +14,7 @@ type AnimationOptions = {
 
 export const useAnima = (options?: AnimationOptions) => {
 
-  const elementRef  = useRef<HTMLElement>(null);
+  const elementRef  = useRef<HTMLParagraphElement>(null);
 
   const {
     y = -20,
