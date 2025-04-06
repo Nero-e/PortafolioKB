@@ -17,9 +17,9 @@ export const useAnima = (options?: AnimationOptions) => {
   const elementRef  = useRef<HTMLParagraphElement>(null);
 
   const {
-    y = -20,
+    y = -50,
     opacity = 0,
-    duration = 0.8,
+    duration = 1,
     delay = 0.3,
     ease = 'power3.out'
   } = options || {};

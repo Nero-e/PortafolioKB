@@ -2,7 +2,8 @@
 // import dynamic from "next/dynamic";
 
 import { useAnima } from "@/src/hooks/useMainAnima";
-// import { PrimaryButton } from "../Button";
+import { useTypingEffect } from "@/src/hooks/useTypingEffect";
+import { PrimaryButton } from "../Button";
 // import CirucleLoader from "../Loaders/CirculeLoader";
 // const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
 //   ssr: false,
@@ -12,24 +13,28 @@ import { useAnima } from "@/src/hooks/useMainAnima";
 export const MainSection = () => {
   // const { greetings, name, content, paragraph, button, canvas } = useMainAnima();
   const greetings = useAnima();
-  const name = useAnima({delay:0.6});
-  const paragraph = useAnima({delay: 0.8});
+  const name = useAnima({ delay: 0.5 });
+  const paragraph = useAnima({ delay: 0.6, });
+  const content = useAnima({ delay: 0.8, y: -20 });
+  const button = useAnima({ delay: 2.2, y: 50 });
 
+  const paragrah1 = useTypingEffect(
+    "✨ Desarrollador Frontend especializado en React & Next.js",
+    { speed: 0.02, delay: 0.9 }
+  );
+  const paragrah2 = useTypingEffect(
+    "💥 Experto en SQL y PL/SQL para la gestión de bases de datos",
+    { speed: 0.02, delay: 2 }
+  );
 
   return (
     <section className="relative flex items-center justify-center h-screen overflow-hidden py-5 px-12 bg-seasalt">
       <div className="relative flex flex-col w-full font-satoshi text-left  max-w-[1400px] z-20 duration-500 leading-none">
-        <p
-          ref={greetings}
-          className="text-2xl/3xl font-bold text-tekgelet"
-        >
-          {/* 👋  */}
+        <p ref={greetings} className="text-2xl/3xl font-bold text-tekgelet">
+          👋 
           ¡Hola!, Soy-
         </p>
-        <h1
-          ref={name}
-          className="text-6xl/9xl font-bold text-night"
-        >
+        <h1 ref={name} className="text-6xl/9xl font-bold text-night">
           Kevin Espitia.
         </h1>
         <p
@@ -41,13 +46,15 @@ export const MainSection = () => {
             Autodidacta con interés en la programación
           </span>
         </p>
-        {/* <div
+        <div
+          ref={content}
           className="text-lg/xl text-[#8f9094] my-8 space-y-2 font-satoshiItalic"
         >
-          <p>✨ Desarrollador Frontend especializado en React & Next.js</p>
-          <p>💥 Experto en SQL y PL/SQL para la gestión de bases de datos</p>
+          <p ref={paragrah1} />
+          <p ref={paragrah2} />
         </div>
         <div
+          ref={button}
           className="flex justify-center md:justify-start space-x-4 mt-4 font-satochi"
         >
           <PrimaryButton
@@ -59,7 +66,7 @@ export const MainSection = () => {
             text="Cv"
             download="Curriculum.pdf"
           />
-        </div> */}
+        </div>
       </div>
       {/* <div
         className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%]"
