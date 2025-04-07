@@ -41,7 +41,7 @@ export const MainSection = () => {
     "💥 Experto en SQL y PL/SQL para la gestión de bases de datos",
     { speed: 0.02, delay: 2 }
   );
-  const canvas = useAnima({ y: 0, delay: 0.3 });
+  const canvas = useAnima({ y: 0, delay: 0.5 });
 
   return (
     <section className="relative flex items-center justify-center h-screen overflow-hidden py-5 px-12 bg-seasalt">
@@ -85,7 +85,7 @@ export const MainSection = () => {
       </div>
       <div
         ref={canvas}
-        className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%] spline-container"
+        className="absolute flex justify-center items-center aspect-square w-[400px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%] spline-container"
       >
         {isVisible && <Animation />}
       </div>
