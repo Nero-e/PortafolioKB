@@ -1,20 +1,35 @@
 "use client";
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 
 import { useAnima } from "@/src/hooks/useMainAnima";
 import { useTypingEffect } from "@/src/hooks/useTypingEffect";
 import { PrimaryButton } from "../Button";
-// import CirucleLoader from "../Loaders/CirculeLoader";
-// const LazySplineAnima = dynamic(() => import("./Animation/Animation"), {
-//   ssr: false,
-//   loading: () => <CirucleLoader />
-// });
+// import Animation from "./Animation/Animation";
+const Animation = dynamic(() => import("./Animation/Animation"), {
+  ssr: false,
+  loading: () =>  <div className="w-11 aspect-square rounded-full bg-seasalt-200 animate-pulse" />
+})
 
 export const MainSection = () => {
-  // const { greetings, name, content, paragraph, button, canvas } = useMainAnima();
+
+ const [isVisible, setIsVisible] = useState(false);
+
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => setIsVisible(entry.isIntersecting),
+    { threshold: 0.1 }
+  );
+  
+  const element = document.querySelector('.spline-container');
+  if (element) observer.observe(element);
+
+  return () => observer.disconnect();
+}, []);
+
   const greetings = useAnima();
   const name = useAnima({ delay: 0.5 });
-  const paragraph = useAnima({ delay: 0.6, });
+  const paragraph = useAnima({ delay: 0.6 });
   const content = useAnima({ delay: 0.8, y: -20 });
   const button = useAnima({ delay: 2.2, y: 50 });
 
@@ -26,13 +41,13 @@ export const MainSection = () => {
     "💥 Experto en SQL y PL/SQL para la gestión de bases de datos",
     { speed: 0.02, delay: 2 }
   );
+  const canvas = useAnima({ y: 0, delay: 0.3 });
 
   return (
     <section className="relative flex items-center justify-center h-screen overflow-hidden py-5 px-12 bg-seasalt">
       <div className="relative flex flex-col w-full font-satoshi text-left  max-w-[1400px] z-20 duration-500 leading-none">
         <p ref={greetings} className="text-2xl/3xl font-bold text-tekgelet">
-          👋 
-          ¡Hola!, Soy-
+          👋 ¡Hola!, Soy-
         </p>
         <h1 ref={name} className="text-6xl/9xl font-bold text-night">
           Kevin Espitia.
@@ -68,11 +83,12 @@ export const MainSection = () => {
           />
         </div>
       </div>
-      {/* <div
-        className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%]"
+      <div
+        ref={canvas}
+        className="absolute flex justify-center items-center aspect-square w-[600px] bottom-[80%] md:bottom-auto md:left-[65%] xl:left-[60%] spline-container"
       >
-        <LazySplineAnima />
-      </div> */}
+        {isVisible && <Animation />}
+      </div>
     </section>
   );
 };

@@ -4,7 +4,7 @@ import { Header } from "../components/Shared/Header/Header";
 
 export const metadata: Metadata = {
   title: "Kevin Espitia - Desarrollador de software",
-  description: "Portafolio by Kevin Espitia",
+  description: "Portafolio de Kevin Espitia, especializado en React y Next.js",
 };
 
 export default function RootLayout({
