@@ -15,6 +15,10 @@ export const PhotoCard = () => {
         width={300}
         height={300}
         className="w-full h-full"
+        priority={false}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/svg+xml;base64,..."
       />
     </div>
   );

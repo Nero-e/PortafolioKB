@@ -17,7 +17,7 @@ export const Gallery = () => {
   const showNotification = (status: "success" | "error", message: string) => {
     setNotification({ visible: true, status, message });
 
-    // Ocultar la notificación después de un tiempo
+  // Ocultar la notificación después de un tiempo
     setTimeout(() => {
       setNotification({ visible: false, status: "", message: "" });
     }, 3000);
@@ -32,7 +32,7 @@ export const Gallery = () => {
           <div className="flex justify-center p-[1vw] sm:col-start-1 sm:row-start-1 sm:row-span-1 col-span-1 row-span-1 lg:row-span-1">
             <PhotoCard />
           </div>
-          {/* About Cardd */}
+          {/* About Card */}
           <GalleryBox className="md:col-start-2" link="/about" isAnimated>
             <div className="absolute p-8 text-center z-20">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
@@ -42,12 +42,16 @@ export const Gallery = () => {
             <div className="relative flex justify-center items-center -mr-[225px] mt-20 w-[550px] h-full">
               <div className="absolute flex flex-col items-center justify-center w-full overflow-hidden">
                 <Image
-                  src={"/images/texto5.png"}
+                  src="/images/texto5.png"
                   alt="About me"
-                  className="relative border-flash-white-200 border-2"
                   width={800}
                   height={800}
-                ></Image>
+                  className="relative border-flash-white-200 border-2"
+                  priority={false}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,..."
+                />
               </div>
             </div>
           </GalleryBox>
@@ -67,11 +71,18 @@ export const Gallery = () => {
                 alt="frame"
                 width={500}
                 height={500}
+                priority={false}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,..."
               />
             </GalleryContent>
           </GalleryBox>
           {/* Location card */}
-          <GalleryBox className="md:col-start-1 md:row-start-2 md:row-span-2 xl:col-span-1 xl:row-span-2" isAnimated>
+          <GalleryBox
+            className="md:col-start-1 md:row-start-2 md:row-span-2 xl:col-span-1 xl:row-span-2"
+            isAnimated
+          >
             <div className="relative flex flex-col text-center w-full h-full p-8">
               <h1 className="mb-1 text-xl font-satoshi font-medium tracking-wider text-seasalt">
                 Ubicación
@@ -93,8 +104,10 @@ export const Gallery = () => {
             </div>
           </GalleryBox>
           {/* Soft skills card */}
-          {/* sm:col-start-1 sm:col-span-2 sm:row-start-4 lg:col-start-2 lg:row-start-2 */}
-          <GalleryBox className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1" isAnimated>
+          <GalleryBox
+            className="xs:row-span-2 sm:row-span-2 md:col-start-1 md:col-span-2 md:row-start-4 xl:col-start-2 xl:row-start-2 xl:row-span-1"
+            isAnimated
+          >
             <div className="relative flex flex-col text-center bg-[url('/images/square.png')] bg-cover w-full h-full p-8">
               {/* Título */}
               <div className="space-y-5">
@@ -152,6 +165,10 @@ export const Gallery = () => {
                           className="relative"
                           width={800}
                           height={800}
+                          priority={false}
+                          loading="lazy"
+                          placeholder="blur"
+                          blurDataURL="data:image/svg+xml;base64,..."
                         />
                       </div>
                     </div>

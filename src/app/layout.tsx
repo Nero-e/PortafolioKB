@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import "../styles/globals.css";
 import { Header } from "../components/Shared/Header/Header";
+import { WebVitals } from "./reportWebVitals";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="selection:bg-night selection:text-seasalt">
         <Header />
         <main className="relative w-full h-full min-h-screen overflow-auto">
+          <WebVitals/>
           {children}
         </main>
       </body>
